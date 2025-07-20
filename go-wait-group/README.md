@@ -1,11 +1,10 @@
-## Go keyword, WatiGroup
+## Go keyword, WaitGroup
 
 ### Wait Group
 
 This program won't print both the print statements all the time.  
 The main goroutine may finish (and exit the program) before the goroutine `go printSomething(...)` even gets a chance to run.  
 Scheduling doesn’t guarantee that the goroutine will execute before main returns.  
-
 
 ```go
 func printSomething(s string) {
@@ -128,7 +127,7 @@ func TestPrintSomething(t *testing.T) {
 }
 ```
 
-**NOTE**: StdIn, StdOut, StdErr are constants
+**NOTE**: Stdin, Stdout, Stderr are constants
 ```go
 var (
 	Stdin  = NewFile(uintptr(syscall.Stdin), "/dev/stdin")
@@ -148,6 +147,9 @@ it broadcasts live, real-time information about everything the kernel is trackin
 The difference? You can not only watch the news, but also poke the news anchor in the face (e.g., by writing to some files in `/proc` to change kernel parameters).
 
 While `/proc` shows processes and kernel state, `/sys` shows devices, drivers, and kernel settings in a much cleaner way. It’s part of *sysfs*, another virtual filesystem.
+
+> /dev = interface to hardware or kernel services, looks like device files.  
+> /proc = real-time view of processes and kernel internals.
 
 **TL;DR**,
 - Driver: A driver is just a piece of code in the kernel that knows how to talk to a specific piece of hardware (or virtual device).
