@@ -1,5 +1,5 @@
 ## Concurreny in Go
 
 Table of contents:
-- [Go keyword, WaitGroup](./race-condition/)
+- [Go keyword, WaitGroup](./go-wait-group/)
 - [Mutex, Race Conditions](./race-condition/)
